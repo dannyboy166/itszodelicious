@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary-pink: #E89AB3;
+  --color-light-pink: #F7DDE4;
+  --color-cream: #FFF8F4;
+  --color-gold: #D8B46A;
+  --color-dark-text: #2F2F2F;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #E89AB3;
+  --color-primary-dark: #d4809e;
+  --color-light-pink: #F7DDE4;
+  --color-cream: #FFF8F4;
+  --color-gold: #D8B46A;
+  --color-gold-dark: #c4a05a;
+  --color-dark: #2F2F2F;
+  --font-sans: var(--font-poppins);
+  --font-script: var(--font-great-vibes);
+  --font-serif: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-dark-text);
+  font-family: var(--font-sans);
+}
+
+/* Lightbox overlay */
+.lightbox-overlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Gallery image hover */
+.gallery-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 40px rgba(232, 154, 179, 0.2);
 }
