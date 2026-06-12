@@ -24,7 +24,7 @@ export default function Home() {
                 alt="It's Zo Delicious"
                 width={500}
                 height={500}
-                className="mx-auto lg:mx-0 mb-6 w-64 sm:w-72 lg:w-80 h-auto"
+                className="mx-auto lg:mx-0 mb-6 w-72 sm:w-80 lg:w-96 h-auto"
                 priority
               />
               <p className="text-dark/70 text-lg sm:text-xl font-light mb-8 max-w-md mx-auto lg:mx-0">
