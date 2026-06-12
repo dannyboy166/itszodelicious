@@ -22,9 +22,9 @@ export default function Home() {
               <Image
                 src="/images/logo/logo-square.png"
                 alt="It's Zo Delicious"
-                width={200}
-                height={200}
-                className="mx-auto lg:mx-0 mb-6"
+                width={500}
+                height={500}
+                className="mx-auto lg:mx-0 mb-6 w-64 sm:w-72 lg:w-80 h-auto"
                 priority
               />
               <p className="text-dark/70 text-lg sm:text-xl font-light mb-8 max-w-md mx-auto lg:mx-0">

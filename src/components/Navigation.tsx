@@ -25,9 +25,9 @@ export default function Navigation() {
             <Image
               src="/images/logo/logo-horizontal.png"
               alt="It's Zo Delicious"
-              width={180}
-              height={76}
-              className="h-12 w-auto"
+              width={500}
+              height={210}
+              className="h-14 w-auto"
               priority
             />
           </Link>
