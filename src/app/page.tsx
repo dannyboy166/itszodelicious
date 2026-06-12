@@ -16,15 +16,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-light-pink">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 py-16 lg:py-24">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 py-16 lg:py-12">
             {/* Left side */}
-            <div className="flex-1 text-center flex flex-col items-center">
+            <div className="flex-1 text-center flex flex-col items-center lg:justify-start lg:pt-0">
               <Image
                 src="/images/logo/logo-square.png"
                 alt="It's Zo Delicious"
                 width={500}
                 height={500}
-                className="mb-6 w-72 sm:w-80 lg:w-96 h-auto"
+                className="mb-6 w-80 sm:w-96 lg:w-[28rem] h-auto"
                 priority
               />
               <p className="text-dark/70 text-lg sm:text-xl font-light mb-8 max-w-md">
@@ -53,7 +53,7 @@ export default function Home() {
             </div>
 
             {/* Right side - Hero image */}
-            <div className="flex-1 w-full max-w-lg lg:max-w-none">
+            <div className="w-full max-w-sm lg:max-w-lg">
               <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/hero/hero-cupcakes.jpg"
