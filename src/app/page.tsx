@@ -18,19 +18,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 py-16 lg:py-24">
             {/* Left side */}
-            <div className="flex-1 text-center lg:text-left">
+            <div className="flex-1 text-center flex flex-col items-center">
               <Image
                 src="/images/logo/logo-square.png"
                 alt="It's Zo Delicious"
                 width={500}
                 height={500}
-                className="mx-auto lg:mx-0 mb-6 w-72 sm:w-80 lg:w-96 h-auto"
+                className="mb-6 w-72 sm:w-80 lg:w-96 h-auto"
                 priority
               />
-              <p className="text-dark/70 text-lg sm:text-xl font-light mb-8 max-w-md mx-auto lg:mx-0">
+              <p className="text-dark/70 text-lg sm:text-xl font-light mb-8 max-w-md">
                 Made with Love, Baked to Make You Smile
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/pricing"
                   className="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors text-center"
