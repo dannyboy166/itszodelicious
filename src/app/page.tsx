@@ -221,10 +221,10 @@ export default function Home() {
             Get in touch to place your custom order today.
           </p>
           <Link
-            href="/enquire"
+            href="/order"
             className="inline-block bg-primary text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-primary-dark transition-colors shadow-lg shadow-primary/30"
           >
-            Enquire Now
+            Order Now
           </Link>
         </div>
       </section>

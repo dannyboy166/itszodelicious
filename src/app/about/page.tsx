@@ -71,7 +71,7 @@ export default function AboutPage() {
 
               <div className="mt-8">
                 <Link
-                  href="/enquire"
+                  href="/order"
                   className="inline-block bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors"
                 >
                   Let&apos;s Create Something Sweet

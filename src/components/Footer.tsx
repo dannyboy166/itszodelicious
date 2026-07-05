@@ -24,6 +24,7 @@ export default function Footer() {
                 { href: "/gallery", label: "Gallery" },
                 { href: "/about", label: "About" },
                 { href: "/faq", label: "FAQ" },
+                { href: "/order", label: "Order Now" },
                 { href: "/enquire", label: "Enquire" },
               ].map((link) => (
                 <li key={link.href}>

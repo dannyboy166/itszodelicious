@@ -96,7 +96,7 @@ export default function PricingPage() {
               Get in touch to discuss your custom cake. We&apos;ll create something special for your celebration.
             </p>
             <Link
-              href="/enquire"
+              href="/order"
               className="inline-block bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors"
             >
               Get a Quote

@@ -44,7 +44,7 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
-              href="/enquire"
+              href="/order"
               className="bg-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-primary-dark transition-colors"
             >
               ORDER NOW
@@ -85,7 +85,7 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
-              href="/enquire"
+              href="/order"
               onClick={() => setIsOpen(false)}
               className="block bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold text-center hover:bg-primary-dark transition-colors mt-4"
             >

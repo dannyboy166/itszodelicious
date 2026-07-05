@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function EnquirePage() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,7 +16,13 @@ export default function EnquirePage() {
           </h1>
           <div className="w-16 h-0.5 bg-gold mx-auto mb-6" />
           <p className="text-dark/60 text-lg">
-            Ready to order? Fill in the form below and I&apos;ll get back to you as soon as possible.
+            Have a question? Fill in the form below and I&apos;ll get back to you as soon as possible.
+          </p>
+          <p className="text-dark/40 text-sm mt-2">
+            Ready to place an order?{" "}
+            <Link href="/order" className="text-primary hover:text-primary-dark transition-colors underline">
+              Use our order form instead
+            </Link>
           </p>
         </div>
       </section>
@@ -47,12 +54,11 @@ export default function EnquirePage() {
             <form
               action="https://formsubmit.co/hello@itzdelicious.com"
               method="POST"
-              encType="multipart/form-data"
               onSubmit={() => setSubmitted(true)}
               className="bg-white rounded-3xl p-8 sm:p-10 shadow-sm space-y-6"
             >
               {/* FormSubmit config */}
-              <input type="hidden" name="_subject" value="New Order Enquiry - It's Zo Delicious" />
+              <input type="hidden" name="_subject" value="New Enquiry - It's Zo Delicious" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
 
@@ -100,53 +106,18 @@ export default function EnquirePage() {
                 />
               </div>
 
-              {/* Event Date and Guests */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="event_date" className="block text-sm font-medium text-dark mb-2">
-                    Event Date
-                  </label>
-                  <input
-                    type="date"
-                    id="event_date"
-                    name="event_date"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors text-dark"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="guests" className="block text-sm font-medium text-dark mb-2">
-                    Number of Guests
-                  </label>
-                  <input
-                    type="number"
-                    id="guests"
-                    name="number_of_guests"
-                    min="1"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors text-dark"
-                    placeholder="e.g. 20"
-                  />
-                </div>
-              </div>
-
-              {/* Product Type */}
+              {/* Subject */}
               <div>
-                <label htmlFor="product_type" className="block text-sm font-medium text-dark mb-2">
-                  Product Type
+                <label htmlFor="subject" className="block text-sm font-medium text-dark mb-2">
+                  Subject
                 </label>
-                <select
-                  id="product_type"
-                  name="product_type"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors text-dark bg-white"
-                >
-                  <option value="">Select a product</option>
-                  <option value="Standard Cupcakes (12)">Standard Cupcakes (12)</option>
-                  <option value="Mix & Match Cupcakes (12)">Mix &amp; Match Cupcakes (12)</option>
-                  <option value="Premium Cupcakes (12)">Premium Cupcakes (12)</option>
-                  <option value="Mini Cupcakes (24)">Mini Cupcakes (24)</option>
-                  <option value="Mini Mix & Match (24)">Mini Mix &amp; Match (24)</option>
-                  <option value="Custom Cake">Custom Cake</option>
-                  <option value="Other">Other</option>
-                </select>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors text-dark"
+                  placeholder="e.g. Product question, Custom request, Availability"
+                />
               </div>
 
               {/* Message */}
@@ -160,27 +131,8 @@ export default function EnquirePage() {
                   required
                   rows={4}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors text-dark resize-none"
-                  placeholder="Tell me about your event, colours, themes, flavours..."
+                  placeholder="Your question or message..."
                 />
-              </div>
-
-              {/* Image Upload */}
-              <div>
-                <label htmlFor="attachment" className="block text-sm font-medium text-dark mb-2">
-                  Inspiration Photo
-                </label>
-                <div className="relative">
-                  <input
-                    type="file"
-                    id="attachment"
-                    name="attachment"
-                    accept="image/*"
-                    className="w-full px-4 py-3 rounded-xl border border-dashed border-gray-300 focus:border-primary outline-none transition-colors text-dark/60 text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-light-pink file:text-primary file:font-medium file:text-sm file:cursor-pointer hover:file:bg-primary hover:file:text-white"
-                  />
-                </div>
-                <p className="text-dark/40 text-xs mt-1">
-                  Upload a photo for design inspiration (optional)
-                </p>
               </div>
 
               {/* Submit */}
